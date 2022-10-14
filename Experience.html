@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="nav-container-experience">
+        <header>
+            <a href="index.html" class="logo">Mariah Dixon</a>
+
+            <nav> 
+                <ul id="navbar">
+                    <li><a href="Bio.html">Bio</a></li>
+                    <li><a href="Experience.html">Experience</a></li>
+                    <li><a href="Portfolio.html">Portfolio</a></li>
+                </ul>
+            </nav>
+
+        </header>
+    </div>
+
+    <section class="My-career">
+        <div>
+            <p class="career-intro transition5">
+                I present my career. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
+    </section>
+
+    <section class="resume">
+        <div class="Top-heading transition5">
+            <p class="resume-heading">Education</p>
+            <p class="resume-sub-heading">Completed School</p>
+        </div>
+
+        <div class="section-date transition5">
+            <p class="date">2016-2020</p>
+            <p class="date-info">Graduated from Highschool in San Francisco and enrolled in San Francisco City College</p>
+        </div>
+        <div class="section-date transition5">
+            <p class="date">2020-2021</p>
+            <p class="date-info">Started working as a freelancer and started studying at an agency — We created diagrams and analyzes for digital companies. During this time learned a lot of experience.</p>
+        </div>
+       
+        <div class="Top-heading transition5">
+            <p class="resume-heading">Software</p>
+            <p class="resume-sub-heading">Program Support</p>
+        </div>
+        <div class="section-date transition5">
+            <p class="date">FIGMA</p>
+            <p class="date-info">Certificate of completion of training in the field of computer science.</p>
+        </div>
+
+    </section>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+
+    <script>
+
+    gsap.from(".transition5", {
+            scrollTrigger: {
+                trigger: ".transition5",
+                start: "top center"
+            },
+            y: 35,
+            opacity: 0,
+            duration: 1,
+            stagger: .6
+        });
+    </script>
+</body>
+</html>

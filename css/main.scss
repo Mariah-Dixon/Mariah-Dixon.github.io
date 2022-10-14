@@ -1,0 +1,552 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+// Home Page - Mariah Dixon 
+body {
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins';
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {width: 100%;}
+
+.nav-container {
+    background-color: #A35ABB;
+
+    a {
+        color: white;
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+
+    .logo {
+        font-weight: bold;
+    }
+
+ 
+
+        ul {
+            display: flex;
+
+            a {
+                display: block;
+                padding: 0 1em;
+            }
+        }
+}
+
+.social-header, .hero-design {
+    display: none;
+}
+
+.hero {
+    background-color: #B264CC;
+    color: white;
+    display: grid;
+    text-align: center;
+    padding: 4em;
+}
+
+.meet-me {
+    font-weight: bold;
+    color: #3A2042;
+}
+
+.scroll {
+    width: 30px;
+    margin-top: 5em;
+}
+
+section {
+    padding: 4em 2em;
+    text-align: center;
+}
+
+.feature {
+    position: relative;
+}
+
+.feature::before {
+    content: " ";
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #E596FF;
+    opacity: 50%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.subtitle {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #B264CC;
+    letter-spacing: .2em;
+    font-size: .85em;
+}
+
+.featured-title {
+    color: black;
+    font-weight: bold;
+    font-size: 1.3em;
+    margin-top: -.4em;
+    display: block;
+}
+
+.featured-desc {
+    color: #3b3b3b;
+    margin-bottom: 3em;
+    font-size: .84em;
+    line-height: 1.8em;
+    font-weight: 300;
+}
+
+.skills {
+    background: #3A2042;
+}
+
+.skill-container ul li {
+    background: white;
+    padding: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+
+    .icon-container {
+        height: 100px;
+        display: grid;
+        place-content: center;
+        margin: 0 auto;
+
+        &.one {
+            width: 50px;
+        }
+        &.two {
+            width: 150px;
+        }
+        &.three {
+            width: 60px;
+        }
+    }
+
+    .skill-title {
+        font-weight: bold;
+    }
+    .featured-desc {
+        margin-bottom: 2em;
+    }
+}
+
+.portfolio {
+    background: #F7F7F7;
+}
+
+.portfolio-container a img {
+    border-radius: 1em;
+    margin-bottom: 2em;
+}
+
+@media only screen and (min-width: 800px) {
+
+    .feature, .portfolio {
+        text-align: left;
+    }
+
+    .feature, .portfolio-container {
+        display: grid;
+        grid-template-columns: 40% auto;
+    }
+
+    .left, .portfolio-left {
+        display: grid;
+        place-content: center;
+    }
+
+    .right {
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+
+    .skills {
+        margin-top: -5em;
+        margin-bottom: -7em;
+        padding-top: 7em;
+    }
+
+    .skill-container ul {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 1em;
+    }
+
+    .portfolio {
+        padding-top: 7em;
+    }
+
+    .portfolio-container img {
+        margin-left: 2em;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .hero {
+        height: 90vh;
+    }
+
+    .nav-container {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+
+        header {
+            background: #A35ABB;
+        }
+    }
+    header {
+        padding: 2em 2em 2em 10em;
+    }
+
+    .social-header {
+        padding: 2em 20em 2em 10em;
+    }
+
+    section {
+        padding: 10em 10em 4em 10em;
+    }
+
+    .social-header {
+        display: block;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 10em;
+            float: right;
+
+            img {
+                width: 35px;
+            }
+        }
+    }
+
+    .hero {
+        display: grid;
+        grid-template-columns: 66% auto;
+        background: unset;
+        padding: 0;
+
+        .content {
+            background: #B264CC;
+            padding: 6em 10em 4em 10em;
+            text-align: left;
+
+            h1 {
+                font-size: 3em;
+                line-height: 1.2em;
+            }
+        }
+    }
+    .meet-me {
+        margin: unset;
+    }
+    .hero-design {
+        display: unset;
+        margin-left: -50.08%;
+        margin-top: 15%;
+        width: 100%;
+    }
+
+    .portfolio img {
+        float: right;
+        max-width: 500px;
+    }
+}
+
+@media only screen and (min-width: 1500px) {
+
+    header {
+        padding: 2em 2em 2em 15em;
+    }
+    .social-header {
+        padding: 2em 10em 2em 0em;
+    }
+    section {
+        padding: 6em 20em 4em 20em;
+    }
+    .hero .content {
+        padding: 9em 20em 6em 15em;
+    }
+}
+
+.circle {
+    animation: circleAnim 1s infinite alternate-reverse;
+}
+
+@keyframes circleAnim {
+  from {
+     transform: translateY(5px);
+      z-index: 5;
+ }
+  to {
+         transform: translateY(30px);
+    }
+}
+
+// Bio Page 
+.nav-container-bio {
+    background-color: #A35ABB;
+
+    a {
+        color: white;
+    }
+}
+
+.introduction {
+    background-color: #B264CC;
+    color: white;
+    display: grid;
+    text-align: center;
+    //padding: 4em;
+    font-family: 'Playfair Display';
+
+    .big-heading {
+        font-size: 160px;
+        display: grid;
+        text-align: center;
+        margin-top: 1px;
+        margin-bottom: 20px;
+    }
+
+    .small-heading {
+        font-size: 36px;
+        text-align: center;
+        margin-top: 1px;
+    }
+}
+
+.bio {
+    display: grid;
+    background-color: #B264CC;
+
+    .right-bio {
+        color: #F7F7F7;
+        font-family: 'Playfair Display';
+        font-size: 20px;
+        align-items: center;
+        padding: 1em 2em 1em 2em;
+    }
+}
+
+.company {
+    background-color: #B264CC;
+    color: #F7F7F7;
+    font-family: 'Playfair Display';
+
+    .heading-company {
+        font-weight: bold;
+        font-size: 36px;
+    }
+
+    .sub-heading-company {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+    .bio {
+        display: grid;
+        grid-template-columns: 40% auto;
+        padding: 5em 10em 1em 10em;
+
+        .right-bio {
+            text-align: left;
+            padding-left: 5em;
+        }
+
+        
+    }
+    .company {
+        text-align: left;
+
+        .sub-heading-company {
+            padding-right: 700px;
+            line-height: 2em;
+            padding-top: 1em;
+        }
+    }
+}
+
+
+// Experience Page 
+.nav-container-experience {
+    background-color: #A35ABB;
+
+    a {
+        color: white;
+    }
+}
+
+.My-career {
+    background-color: #3A2042;
+
+    .career-intro {
+        color: #F7F7F7;
+        font-family: 'Playfair Display';
+        font-size: 36px;
+    }
+}
+
+.resume {
+    background-color: #3A2042;
+
+    .resume-heading {
+        color: #F7F7F7;
+        font-family: 'Playfair Display';
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .resume-sub-heading {
+        color: #F7F7F7;
+        font-family: 'Playfair Display';
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .date {
+        color: #F7F7F7;
+        font-family: 'Playfair Display';
+        font-size: 20px;
+        text-align: left;
+    }
+
+    .date-info {
+        color: #F7F7F7;
+        font-family: 'Playfair Display';
+        font-size: 32px;
+        text-align: left;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+
+.My-career {
+    text-align: left;
+    padding-right: 600px;
+    padding-bottom: 10px;
+}
+
+.section-date {
+    display: grid;
+    grid-template-columns: 20% auto;
+    border-bottom: solid #F7F7F7;
+    padding-bottom: 4em;
+    padding-top: 4em;
+
+    .date {
+        font-weight: 100;
+    }
+}
+}
+
+// Portfolio Page
+
+.nav-container-portfolio {
+    background-color: #3A2042;
+
+    a {
+        color: white;
+    }
+}
+
+.Name-heading {
+    background-color: #3A2042;
+    color: #F7F7F7;
+    display: grid;
+    text-align: center;
+    font-family: 'Playfair Display';
+
+    p {
+            font-size: 100px;
+            display: grid;
+            text-align: center;
+            margin-top: 1px;
+            margin-bottom: 20px;
+    }
+
+}
+
+.Picture-subtitle {
+    background-color: #3A2042;
+    color: #F7F7F7;
+    font-family: 'Playfair Display';
+    line-height: 2.2em;
+}
+
+.trio {
+    background-color: #3A2042;
+    color: #F7F7F7;
+    font-family: 'Playfair Display';
+    line-height: 2.0em;
+}
+
+.image-section {
+    background-color: #3A2042;
+}
+
+
+@media only screen and (min-width: 1000px) {
+
+    .Name-heading {
+    
+        p {
+                font-size: 170px;
+                display: grid;
+                text-align: center;
+                padding-top: 5px;
+                margin-bottom: 20px;
+        }
+    
+    }
+
+    .Picture-subtitle {
+        font-size: 25px;
+        padding-top: 70px;
+    }
+
+    .trio{
+        display: grid;
+        grid-template-columns: 50%;
+        padding: 5em 10em 1em 10em;
+
+       
+
+        .subtitle-left {
+            text-align: center;
+        }
+    }
+
+    .image-section {
+        padding-top: 50px;
+
+        .first-image {
+            padding-bottom: 100px;
+        }
+    }
+}
