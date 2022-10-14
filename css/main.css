@@ -6,6 +6,97 @@ body {
   font-family: "Poppins";
 }
 
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+  -webkit-animation: cursorAnim 0.5s infinite alternate;
+          animation: cursorAnim 0.5s infinite alternate;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.cursor::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: 0.5;
+  top: -8px;
+  left: -8px;
+  -webkit-animation: cursorAnim2 0.5s infinite alternate;
+          animation: cursorAnim2 0.5s infinite alternate;
+}
+
+@-webkit-keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnim {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+@-webkit-keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@keyframes cursorAnim2 {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.4);
+  }
+}
+@-webkit-keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+@keyframes cursorAnim3 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(3);
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+.expand {
+  -webkit-animation: cursorAnim3 0.5s forwards;
+          animation: cursorAnim3 0.5s forwards;
+  border: 1px solid #321b38;
+}
+
 ul {
   list-style-type: none;
   margin: 0;
@@ -356,7 +447,7 @@ section {
   }
 }
 .nav-container-experience {
-  background-color: #A35ABB;
+  background-color: #321b38;
 }
 .nav-container-experience a {
   color: white;
@@ -469,12 +560,19 @@ section {
     padding-top: 70px;
   }
   .trio {
+    text-align: left;
+    padding-top: 2em;
+  }
+  .trio .trio1 {
     display: grid;
-    grid-template-columns: 50%;
-    padding: 5em 10em 1em 10em;
+    grid-template-columns: 55% auto;
+    padding-bottom: 5em;
   }
   .trio .subtitle-left {
-    text-align: center;
+    display: grid;
+  }
+  .trio .subtitle-left .left-sub {
+    padding: 7em 4em 2em 4em;
   }
   .image-section {
     padding-top: 50px;

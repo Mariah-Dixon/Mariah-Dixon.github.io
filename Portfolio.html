@@ -9,6 +9,9 @@
 </head>
 
 <body>
+
+    <div class="cursor"></div>
+
     <div class="nav-container-portfolio">
         <header>
             <a href="index.html" class="logo">Mariah Dixon</a>
@@ -46,7 +49,7 @@
 <section class="trio">
 
     <div class="trio1 transition7">
-        <div class="trio-left transition7">
+        <div class=" trio-pic-left transition7">
             <div class="subtitle-left">
                 <p class="left-sub">consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat n.</p>
             </div>
@@ -55,7 +58,7 @@
     </div>
 
     <div class="trio1 transition7">
-        <div class="trio-left transition7">
+        <div class=" trio-pic-left transition7">
             <div class="subtitle-left">
                 <p class="left-sub">consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat n.</p>
             </div>
@@ -63,8 +66,8 @@
         <a href="#"><img src="images/SECTION3.2.pdf" alt="the hum sum"></a>
     </div>
 
-    <div class="trio1 ">
-        <div class="trio-left transition7">
+    <div class="trio1 transition7">
+        <div class=" trio-pic-left transition7">
             <div class="subtitle-left">
                 <p class="left-sub">consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat n.</p>
             </div>
@@ -97,6 +100,22 @@ gsap.from(".transition7", {
         duration: 1,
         stagger: .6
     });
+</script>
+
+<script>
+    const cursor = document.querySelector('.cursor');
+
+    document.addEventListener('mousemove', e => {
+        cursor.setAttribute("style", "top: "+(e.pageY -10)+"px; left: "+(e.pageX - 10)+"px;")
+    })
+
+    document.addEventListener('click', () => {
+        cursor.classList.add("expand");
+        
+        setTimeout(() => {
+            cursor.classList.remove("expand");
+        }, 500)
+    })
 </script>
 
 </body>
